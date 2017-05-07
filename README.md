@@ -1,28 +1,43 @@
 # docker-course
 
-## Listing images and containers
+### Listing images and containers
 
 `docker image ls`
 
 `docker container ls`
 
-## Running containers
+### Creating and Running containers
 
 `docker container run -p hostPort:containerPort imageName:imageVersion`
 
-## Creating images from a Dockerfile
+`... --detach|-d`
+> Runs the container in the background
+
+`... -v localPath:containerPath`
+> Creates a link between your local directory and a directory in the container, so you don't lose that data when the container is stopped 
+
+`docker container run httpd:2.4`
+> Create and run a container based on the image for the Apache HTTP Server version 2.4
+
+### Creating images from a Dockerfile
 
 `docker image build --tag setImageName:setImageVersion .` 
 > The dot tells docker to look for a Dockerfile in the current directory
 
-## Executing commands in a running container
+### Executing commands in a running container
 
 `docker container exec apt-get update && apt-get install -y fortunes`
 
 `docker container exec -it containerId|containerName /bin/bash`
 > This will start an interactive shell with the container
 
-## Sample Dockerfile
+### Copying files into a running container 
+
+`docker container cp yourLocalFilePath containerName:containerDirectoryTarget`
+
+`docker container cp page.html myImage:/usr/local/apache2/htdocs/`
+
+### Sample Dockerfile
 
 ```
 LABEL maintainer="miltonbecker@gmail.com"
