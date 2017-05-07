@@ -1,12 +1,12 @@
 # docker-course - notes
 
-### Listing images and containers
+## Listing images and containers
 
 `docker image ls`
 
 `docker container ls`
 
-### Creating and Running containers
+## Creating and Running containers
 
 `docker container run -p hostPort:containerPort imageName:imageVersion`
 
@@ -16,30 +16,30 @@
 `... --detach|-d`
 > Runs the container in the background
 
-#### Volume mapping 
+### Volume mapping 
 
 `... -v localPath:containerPath`
 > Creates a link between your local directory and a directory in the container, so you don't lose that data when the container is stopped 
 
-### Creating images from a Dockerfile
+## Creating images from a Dockerfile
 
 `docker image build --tag setImageName:setImageVersion .` 
 > The dot tells docker to look for a Dockerfile in the current directory
 
-### Executing commands in a running container
+## Executing commands in a running container
 
 `docker container exec apt-get update && apt-get install -y fortunes`
 
 `docker container exec -it containerId|containerName /bin/bash`
 > This will start an interactive shell with the container
 
-### Copying files into a running container 
+## Copying files into a running container 
 
 `docker container cp yourLocalFilePath containerName:containerDirectoryTarget`
 
 `docker container cp page.html myImage:/usr/local/apache2/htdocs/`
 
-### Sample Dockerfile
+## Sample Dockerfile
 
 ```
 LABEL maintainer="miltonbecker@gmail.com"
