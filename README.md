@@ -1,4 +1,4 @@
-# docker-course
+# docker-course - notes
 
 ### Listing images and containers
 
@@ -10,14 +10,16 @@
 
 `docker container run -p hostPort:containerPort imageName:imageVersion`
 
+`docker container run httpd:2.4`
+> Create and run a container based on the image for the Apache HTTP Server version 2.4
+
 `... --detach|-d`
 > Runs the container in the background
 
+#### Volume mapping 
+
 `... -v localPath:containerPath`
 > Creates a link between your local directory and a directory in the container, so you don't lose that data when the container is stopped 
-
-`docker container run httpd:2.4`
-> Create and run a container based on the image for the Apache HTTP Server version 2.4
 
 ### Creating images from a Dockerfile
 
