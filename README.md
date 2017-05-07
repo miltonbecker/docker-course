@@ -13,7 +13,14 @@
 ## Creating images from a Dockerfile
 
 `docker image build --tag setImageName:setImageVersion .` 
-> the dot tells docker to look for a Dockerfile in the current directory
+> The dot tells docker to look for a Dockerfile in the current directory
+
+## Executing commands in a running container
+
+`docker container exec apt-get update && apt-get install -y fortunes`
+
+`docker container exec -it containerId|containerName /bin/bash`
+> This will start an interactive shell with the container
 
 ## Sample Dockerfile
 
