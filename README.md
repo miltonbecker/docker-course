@@ -20,6 +20,9 @@
 `... --detach|-d`
 > Runs the container in the background
 
+`... --name aName`
+> Sets a name for the container, so we can latter reference to it using its name instead of its id
+
 ### Volume mapping 
 
 `... -v localPath:containerPath`
