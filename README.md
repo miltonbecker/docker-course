@@ -1,5 +1,9 @@
 # docker-course - notes
 
+## General info
+
+`docker info`
+
 ## Listing images and containers
 
 `docker image ls`
