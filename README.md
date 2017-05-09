@@ -23,6 +23,9 @@
 `... --name aName`
 > Sets a name for the container, so we can latter reference to it using its name instead of its id
 
+`... --rm`
+> Deletes the container when it stops running
+
 ### Volume mapping 
 
 `... -v localPath:containerPath`
