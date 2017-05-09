@@ -6,9 +6,9 @@
 
 ## Listing images and containers
 
-`docker image ls`
+`docker images -a`
 
-`docker container ls`
+`docker ps -a`
 
 ## Creating and Running containers
 
